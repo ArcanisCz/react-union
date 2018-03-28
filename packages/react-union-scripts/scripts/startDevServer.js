@@ -32,6 +32,7 @@ function startDevServer() {
 				}),
 				webpackHotMiddleware(compiler),
 			];
+			middleware.push(...(unionConfig.browserSyncMiddlewares || []));
 
 			const baseDirs = [webpackConfig.output.path, unionConfig.paths.public];
 
