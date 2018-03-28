@@ -150,8 +150,7 @@ const getWebpackConfig_ = config => {
 				require.resolve('babel-polyfill'),
 				...(hmr
 					? [
-						require.resolve('react-hot-loader/patch'),
-						require.resolve('webpack-hot-middleware/client'),
+						'webpack-hot-middleware/client?reload=true',
 					]
 					: []),
 				paths.index,
